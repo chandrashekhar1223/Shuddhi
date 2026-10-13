@@ -1,0 +1,42 @@
+----------------------------------------
+Time: 10/6/2026 11:41:33 AM
+Message: SocietyName
+StackTrace:    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Shuddhi.Database.UserDB.GetUser(Int32 UserId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\UserDB.cs:line 98
+----------------------------------------
+Time: 10/6/2026 11:41:33 AM
+Message: SocietyName
+StackTrace:    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Shuddhi.Database.UserDB.GetUser(Int32 UserId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\UserDB.cs:line 98
+   at Shuddhi.Service.UserService.GetUser(Int32 UserId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\UserService.cs:line 19
+----------------------------------------
+Time: 10/6/2026 11:41:33 AM
+Message: SocietyName
+StackTrace:    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Shuddhi.Database.UserDB.GetUser(Int32 UserId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\UserDB.cs:line 98
+   at Shuddhi.Service.UserService.GetUser(Int32 UserId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\UserService.cs:line 19
+   at Shuddhi.Controllers.UserController.GetUsers(Int32 Userid) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\UserController.cs:line 60
+----------------------------------------
+Time: 10/6/2026 11:42:49 AM
+Message: Object cannot be cast from DBNull to other types.
+StackTrace:    at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at Shuddhi.Database.UserDB.GetUser(Int32 UserId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\UserDB.cs:line 98
+----------------------------------------
+Time: 10/6/2026 11:42:51 AM
+Message: Object cannot be cast from DBNull to other types.
+StackTrace:    at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at Shuddhi.Database.UserDB.GetUser(Int32 UserId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\UserDB.cs:line 98
+   at Shuddhi.Service.UserService.GetUser(Int32 UserId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\UserService.cs:line 19
+----------------------------------------
+Time: 10/6/2026 11:42:55 AM
+Message: Object cannot be cast from DBNull to other types.
+StackTrace:    at System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   at Shuddhi.Database.UserDB.GetUser(Int32 UserId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\UserDB.cs:line 98
+   at Shuddhi.Service.UserService.GetUser(Int32 UserId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\UserService.cs:line 19
+   at Shuddhi.Controllers.UserController.GetUsers(Int32 Userid) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\UserController.cs:line 60

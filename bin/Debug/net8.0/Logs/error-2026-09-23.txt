@@ -1,0 +1,60 @@
+----------------------------------------
+Time: 9/23/2026 2:28:42 PM
+Message: Error converting data type varchar to bigint.
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at Shuddhi.Database.LoginDB.Login(String userId, String password) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\LoginDB.cs:line 37
+----------------------------------------
+Time: 9/23/2026 2:29:07 PM
+Message: Error converting data type varchar to bigint.
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at Shuddhi.Database.LoginDB.Login(String userId, String password) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\LoginDB.cs:line 37
+----------------------------------------
+Time: 9/23/2026 2:32:18 PM
+Message: Error converting data type varchar to bigint.
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at Shuddhi.Database.LoginDB.Login(String userId, String password) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\LoginDB.cs:line 37
+----------------------------------------
+Time: 9/23/2026 3:44:47 PM
+Message: Status
+StackTrace:    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Shuddhi.Database.PickupRequestDB.GetPickupRequestDetails1(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\PickupRequestDB.cs:line 374
+   at Shuddhi.Service.PikupRequest.GetPickuprequestdetails1(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\PikupRequest.cs:line 571
+   at Shuddhi.Controllers.PickupRequestController.GetPickupRequestByUserId(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\PickupRequestController.cs:line 143
+----------------------------------------
+Time: 9/23/2026 3:46:47 PM
+Message: Status
+StackTrace:    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Shuddhi.Database.PickupRequestDB.GetPickupRequestDetails1(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\PickupRequestDB.cs:line 374
+   at Shuddhi.Service.PikupRequest.GetPickuprequestdetails1(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\PikupRequest.cs:line 571
+   at Shuddhi.Controllers.PickupRequestController.GetPickupRequestByUserId(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\PickupRequestController.cs:line 143
+----------------------------------------
+Time: 9/23/2026 3:47:59 PM
+Message: Status
+StackTrace:    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Shuddhi.Database.PickupRequestDB.GetPickupRequestDetails1(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\PickupRequestDB.cs:line 374
+   at Shuddhi.Service.PikupRequest.GetPickuprequestdetails1(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\PikupRequest.cs:line 571
+   at Shuddhi.Controllers.PickupRequestController.GetPickupRequestByUserId(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\PickupRequestController.cs:line 143

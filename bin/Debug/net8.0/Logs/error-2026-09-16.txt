@@ -1,0 +1,18 @@
+----------------------------------------
+Time: 9/16/2026 12:28:43 PM
+Message: Unable to cast object of type 'System.Collections.Generic.List`1[System.Int32]' to type 'System.IConvertible'.Couldn't store <System.Collections.Generic.List`1[System.Int32]> in WasteSubTypeId Column.  Expected type is Int32.
+StackTrace:    at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataTable.NewRecordFromArray(Object[] value)
+   at System.Data.DataRowCollection.Add(Object[] values)
+   at Shuddhi.Database.PickupRequestDB.InsertPickupRequest(PickupRequestModel obj) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\PickupRequestDB.cs:line 187
+   at Shuddhi.Service.PikupRequest.Shuddhi.Repository.IPickupRequest.AddPickupRequest(PickupRequestModel obj) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\PikupRequest.cs:line 229
+   at Shuddhi.Controllers.PickupRequestController.InsertPickupRequest(PickupRequestModel model) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\PickupRequestController.cs:line 113
+----------------------------------------
+Time: 9/16/2026 12:44:40 PM
+Message: The input string '2.4.3' was not in a correct format.Couldn't store <2.4.3> in WasteSubTypeId Column.  Expected type is Int32.
+StackTrace:    at System.Data.DataColumn.set_Item(Int32 record, Object value)
+   at System.Data.DataTable.NewRecordFromArray(Object[] value)
+   at System.Data.DataRowCollection.Add(Object[] values)
+   at Shuddhi.Database.PickupRequestDB.InsertPickupRequest(PickupRequestModel obj) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\PickupRequestDB.cs:line 198
+   at Shuddhi.Service.PikupRequest.Shuddhi.Repository.IPickupRequest.AddPickupRequest(PickupRequestModel obj) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\PikupRequest.cs:line 229
+   at Shuddhi.Controllers.PickupRequestController.InsertPickupRequest(PickupRequestModel model) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\PickupRequestController.cs:line 113

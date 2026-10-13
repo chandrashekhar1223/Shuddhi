@@ -1,0 +1,38 @@
+----------------------------------------
+Time: 9/30/2026 5:39:13 PM
+Message: No mapping exists from object type Shuddhi.Model.GetSocieties to a known managed provider native type.
+StackTrace:    at System.Data.SqlClient.MetaType.GetMetaTypeFromValue(Type dataType, Object value, Boolean inferLen, Boolean streamAllowed)
+   at System.Data.SqlClient.MetaType.GetMetaTypeFromType(Type dataType)
+   at System.Data.SqlClient.SqlParameter.GetMetaTypeOnly()
+   at System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   at System.Data.SqlClient.SqlCommand.SetUpRPCParameters(_SqlRPC rpc, Boolean inSchema, SqlParameterCollection parameters)
+   at System.Data.SqlClient.SqlCommand.BuildRPC(Boolean inSchema, SqlParameterCollection parameters, _SqlRPC& rpc)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.BeginExecuteReader(AsyncCallback callback, Object stateObject, CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.<>c__DisplayClass130_0.<ExecuteReaderAsync>b__1(CommandBehavior commandBehavior, AsyncCallback callback, Object stateObject)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1](Func`4 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory`1.FromAsync[TArg1](Func`4 beginMethod, Func`2 endMethod, TArg1 arg1, Object state)
+   at System.Data.SqlClient.SqlCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Shuddhi.Database.SocietyDB.GetSocietyListByPincode(GetSocieties pincode) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\SocietyDB.cs:line 295
+----------------------------------------
+Time: 9/30/2026 5:39:15 PM
+Message: No mapping exists from object type Shuddhi.Model.GetSocieties to a known managed provider native type.
+StackTrace:    at System.Data.SqlClient.MetaType.GetMetaTypeFromValue(Type dataType, Object value, Boolean inferLen, Boolean streamAllowed)
+   at System.Data.SqlClient.MetaType.GetMetaTypeFromType(Type dataType)
+   at System.Data.SqlClient.SqlParameter.GetMetaTypeOnly()
+   at System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   at System.Data.SqlClient.SqlCommand.SetUpRPCParameters(_SqlRPC rpc, Boolean inSchema, SqlParameterCollection parameters)
+   at System.Data.SqlClient.SqlCommand.BuildRPC(Boolean inSchema, SqlParameterCollection parameters, _SqlRPC& rpc)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.BeginExecuteReader(AsyncCallback callback, Object stateObject, CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.<>c__DisplayClass130_0.<ExecuteReaderAsync>b__1(CommandBehavior commandBehavior, AsyncCallback callback, Object stateObject)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1](Func`4 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory`1.FromAsync[TArg1](Func`4 beginMethod, Func`2 endMethod, TArg1 arg1, Object state)
+   at System.Data.SqlClient.SqlCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Shuddhi.Database.SocietyDB.GetSocietyListByPincode(GetSocieties pincode) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\SocietyDB.cs:line 295
+   at Shuddhi.Service.Society.GetSocietyListByPincode(GetSocieties Pincode) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\Society.cs:line 70
+   at Shuddhi.Controllers.SocietyController.GetSocietiesByPincode(GetSocieties Pincode) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\SocietyController.cs:line 150

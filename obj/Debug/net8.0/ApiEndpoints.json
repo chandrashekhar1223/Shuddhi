@@ -1,0 +1,1493 @@
+[
+  {
+    "ContainingType": "Shuddhi.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Shuddhi.Model.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.DashboardController",
+    "Method": "Dashboard",
+    "RelativePath": "api/Dashboard/Rewards",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Shuddhi.Model.DashboardModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.FAQController",
+    "Method": "GetFAQs",
+    "RelativePath": "api/FAQ",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.MasterController",
+    "Method": "GetStateCityMaster",
+    "RelativePath": "api/Master/StateCityMaster",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.OTPController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/OTP/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Shuddhi.Model.ChangePasswordModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.OTPController",
+    "Method": "ForgotPasswordSendOTP",
+    "RelativePath": "api/OTP/ForgotPasswordSendOTP",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Shuddhi.Model.ForgotPasswordModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.OTPController",
+    "Method": "ForgotPasswordVerifyOTP",
+    "RelativePath": "api/OTP/ForgotPasswordVerifyOTP",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Shuddhi.Model.VerifyOTPModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.OTPGeneratorController",
+    "Method": "SendSms",
+    "RelativePath": "api/OTP/otpgenerator",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.OTPController",
+    "Method": "Sendotp",
+    "RelativePath": "api/OTP/Sendotp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sendotp",
+        "Type": "Shuddhi.Model.SendOTPModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.OTPController",
+    "Method": "Verifyotp",
+    "RelativePath": "api/OTP/Verifyotp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "verifyOTPModel",
+        "Type": "Shuddhi.Model.VerifyOTPModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.PickupRequestController",
+    "Method": "AddDryWaste",
+    "RelativePath": "api/PickupRequest/AddDryWaste",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "User_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Paper",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cardboard",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Plastic",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Metal",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Glass",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Packaging_Waste",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Other_Dry_Waste",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Dry_Waste_Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Dry_Waste_Photo_Path",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.PickupRequestController",
+    "Method": "AddEWaste",
+    "RelativePath": "api/PickupRequest/AddEWaste",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "User_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Mobile",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Batteries",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Charger",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Laptop",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cable",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Small_Appliances",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Electrical_Equipment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Electronic_Equipment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Other_E_Waste",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "E_Waste_Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "E_Waste_Photo_Path",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.PickupRequestController",
+    "Method": "AddOtherWaste",
+    "RelativePath": "api/PickupRequest/AddOtherWaste",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "User_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Clothes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Shoes",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Thermocol",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Used_Cooking_Oil",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Mixed_Waste",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Other_Waste",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Other_Waste_Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Other_Waste_Photo_Path",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.PickupRequestController",
+    "Method": "AddWetWaste",
+    "RelativePath": "api/PickupRequest/AddWetWaste",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "User_ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Food_Waste",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Vegetable_Waste",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fruit_Waste",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Garden_Waste",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Organic_Waste",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Other_Wet_Waste",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Wet_Waste_Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Wet_Waste_Photo_Path",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UpdatedBy",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.PickupRequestController",
+    "Method": "GetPendingPickupRequests",
+    "RelativePath": "api/PickupRequest/GetPendingPickupRequests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.PickupRequestController",
+    "Method": "GetPickupRequestByUserId",
+    "RelativePath": "api/PickupRequest/GetPickupRequestByUserId/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.PickupRequestController",
+    "Method": "InsertPickupRequest",
+    "RelativePath": "api/PickupRequest/InsertPickupRequest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Society",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pincode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Note",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TotalEstimatedWaste",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PickupDateTime",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Latitude",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Longitude",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "WasteTypes",
+        "Type": "System.Collections.Generic.List\u00601[[Shuddhi.Model.PickupWasteModel, Shuddhi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "DryWaste_Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "WetWaste_Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "EWaste_Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "OtherWaste_Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "PickupRequestId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreatedDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "SocietyId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.PickupRequestController",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/PickupRequest/UpdateStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requests",
+        "Type": "Shuddhi.Model.PickupRequestStatusModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.SocietyController",
+    "Method": "AddSociety",
+    "RelativePath": "api/Society/AddSociety",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Shuddhi.Model.AddSociety",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.SocietyController",
+    "Method": "DeleteSociety",
+    "RelativePath": "api/Society/DeleteSociety/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.SocietyController",
+    "Method": "GetById",
+    "RelativePath": "api/Society/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.SocietyController",
+    "Method": "GetSocieties",
+    "RelativePath": "api/Society/GetSocietes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.SocietyController",
+    "Method": "GetSocietiesByPincode",
+    "RelativePath": "api/Society/GetSocietes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Pincode",
+        "Type": "Shuddhi.Model.GetSocieties",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.SocietyController",
+    "Method": "SearchSociety",
+    "RelativePath": "api/Society/Search",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Search",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.SocietyController",
+    "Method": "UpdateSociety",
+    "RelativePath": "api/Society/UpdateSocieties",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Shuddhi.Model.AddSociety",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.ValueTuple\u00602[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.TokenManagerController",
+    "Method": "Ticketassigntovendor",
+    "RelativePath": "api/TokenManager/Assign_Vendor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Request",
+        "Type": "System.Collections.Generic.List\u00601[[Shuddhi.Model.AssignVendor, Shuddhi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.TokenManagerController",
+    "Method": "GetPickupRequestsByVendor",
+    "RelativePath": "api/TokenManager/GetAssignedTicketDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vendorId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Shuddhi.Model.GroupedPickupRequestVendorModel, Shuddhi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.TokenManagerController",
+    "Method": "GetRequests",
+    "RelativePath": "api/TokenManager/GetRequests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Shuddhi.Model.TokenManagerModel, Shuddhi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.TokenManagerController",
+    "Method": "GetVendorsByPincode",
+    "RelativePath": "api/TokenManager/GetVendor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vendorbypincode",
+        "Type": "Shuddhi.Model.VendorByPinRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Shuddhi.Model.VendorByPin, Shuddhi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.TokenManagerController",
+    "Method": "Update_Status",
+    "RelativePath": "api/TokenManager/UpdateStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PickupRequest_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Vendor_Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.UserController",
+    "Method": "EditUser",
+    "RelativePath": "api/User/EditUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "FullName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MobileNumber",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmailID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressLine1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressLine2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SocietyName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AreaName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CityName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "District",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PinCode",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegisteredOn",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserStatus",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "User_Profile_Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "User_Profile_photo_url",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Wing",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sector",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Landmark",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Plot_No",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "House_No",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FLoor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Society_Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.UserController",
+    "Method": "GetUsers",
+    "RelativePath": "api/User/getusers/{Userid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Userid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.UserController",
+    "Method": "Register",
+    "RelativePath": "api/User/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "FullName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MobileNumber",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmailID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressLine1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressLine2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SocietyName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AreaName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CityName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "District",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PinCode",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegisteredOn",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserStatus",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "User_Profile_Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "User_Profile_photo_url",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Wing",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sector",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Landmark",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Plot_No",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "House_No",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FLoor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Society_Id",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.VendorController",
+    "Method": "GetVendorById",
+    "RelativePath": "api/Vendor/GetVendorById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.VendorController",
+    "Method": "VendorLogin",
+    "RelativePath": "api/Vendor/Vendorlogin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Shuddhi.Model.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.VendorController",
+    "Method": "Register",
+    "RelativePath": "api/Vendor/vendorregister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MobileNumber",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmailID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressLine1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressLine2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AreaName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CityName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "District",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PinCode",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RecycleMainID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RecycleSubID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegisteredOn",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorStatus",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLicence",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLicenceFileLink",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GSTCertificate",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "GSTCertificateFileLink",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Waste_Handling_Certificate",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Waste_Handling_CertificateFileLink",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address_Proof",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address_ProofFileLink",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Bank_Details",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Bank_DetailsFileLink",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.VendorController",
+    "Method": "UpdateVendor",
+    "RelativePath": "api/Vendor/VendorUpdate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "DateOfBirth",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MobileNumber",
+        "Type": "System.Nullable\u00601[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "EmailID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressLine1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AddressLine2",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AreaName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CityName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "District",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PinCode",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RecycleMainID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RecycleSubID",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "RegisteredOn",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "VendorStatus",
+        "Type": "System.Nullable\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLicence",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "BusinessLicenceFileLink",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GSTCertificate",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "GSTCertificateFileLink",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Waste_Handling_Certificate",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Waste_Handling_CertificateFileLink",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address_Proof",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Address_ProofFileLink",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Bank_Details",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Bank_DetailsFileLink",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Shuddhi.Controllers.GetWasteMasterController",
+    "Method": "GetWasteMaster",
+    "RelativePath": "api/Waste/GetWasteMaster",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

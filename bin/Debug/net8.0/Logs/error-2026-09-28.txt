@@ -1,0 +1,86 @@
+----------------------------------------
+Time: 9/28/2026 12:04:44 PM
+Message: Could not find stored procedure 'sp_GetSocieties'.
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, String endMethod)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Shuddhi.Database.SocietyDB.GetSocieties(String search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\SocietyDB.cs:line 68
+   at Shuddhi.Service.Society.GetSocieties(String search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\Society.cs:line 35
+   at Shuddhi.Controllers.SocietyController.SearchSociety(String Search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\SocietyController.cs:line 56
+----------------------------------------
+Time: 9/28/2026 12:05:42 PM
+Message: Could not find stored procedure 'sp_GetSocieties'.
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, String endMethod)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Shuddhi.Database.SocietyDB.GetSocieties(String search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\SocietyDB.cs:line 68
+   at Shuddhi.Service.Society.GetSocieties(String search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\Society.cs:line 35
+   at Shuddhi.Controllers.SocietyController.SearchSociety(String Search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\SocietyController.cs:line 56
+----------------------------------------
+Time: 9/28/2026 12:09:58 PM
+Message: Procedure or function 'sp_Society' expects parameter '@Society_Name', which was not supplied.
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, String endMethod)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Shuddhi.Database.SocietyDB.GetSocieties(String search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\SocietyDB.cs:line 70
+   at Shuddhi.Service.Society.GetSocieties(String search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\Society.cs:line 35
+   at Shuddhi.Controllers.SocietyController.SearchSociety(String Search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\SocietyController.cs:line 56
+----------------------------------------
+Time: 9/28/2026 12:10:44 PM
+Message: The method or operation is not implemented.
+StackTrace:    at Shuddhi.Service.Society.GetSocieties(String search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\Society.cs:line 38
+   at Shuddhi.Controllers.SocietyController.SearchSociety(String Search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\SocietyController.cs:line 56
+----------------------------------------
+Time: 9/28/2026 12:14:06 PM
+Message: The method or operation is not implemented.
+StackTrace:    at Shuddhi.Service.Society.GetSocieties(String search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\Society.cs:line 38
+   at Shuddhi.Controllers.SocietyController.SearchSociety(String Search) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\SocietyController.cs:line 56
+----------------------------------------
+Time: 9/28/2026 2:32:29 PM
+Message: Could not find stored procedure 'sp_UpdateSociety'.
+StackTrace:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   at System.Data.SqlClient.SqlCommand.InternalEndExecuteReader(IAsyncResult asyncResult, String endMethod)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReaderInternal(IAsyncResult asyncResult)
+   at System.Data.SqlClient.SqlCommand.EndExecuteReader(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Shuddhi.Database.SocietyDB.UpdateSociety(AddSociety society) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\SocietyDB.cs:line 210
+   at Shuddhi.Service.Society.UpdateSociety(AddSociety model) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\Society.cs:line 63
+   at Shuddhi.Controllers.SocietyController.UpdateSociety(AddSociety model) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\SocietyController.cs:line 107

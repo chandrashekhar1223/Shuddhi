@@ -1,0 +1,17 @@
+----------------------------------------
+Time: 9/22/2026 11:33:27 AM
+Message: UserId
+StackTrace:    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Shuddhi.Database.PickupRequestDB.GetPickupRequestDetails1(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\PickupRequestDB.cs:line 307
+   at Shuddhi.Service.PikupRequest.GetPickuprequestdetails1(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\PikupRequest.cs:line 532
+   at Shuddhi.Controllers.PickupRequestController.GetPickupRequestByUserId(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\PickupRequestController.cs:line 143
+----------------------------------------
+Time: 9/22/2026 12:02:03 PM
+Message: The input string '2,3,4' was not in a correct format.
+StackTrace:    at System.Number.ThrowFormatException[TChar](ReadOnlySpan`1 value)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at Shuddhi.Database.PickupRequestDB.GetPickupRequestDetails1(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\PickupRequestDB.cs:line 338
+   at Shuddhi.Service.PikupRequest.GetPickuprequestdetails1(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\PikupRequest.cs:line 532
+   at Shuddhi.Controllers.PickupRequestController.GetPickupRequestByUserId(Int32 userId) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\PickupRequestController.cs:line 143

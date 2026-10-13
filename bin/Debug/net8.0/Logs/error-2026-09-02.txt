@@ -1,0 +1,4 @@
+----------------------------------------
+Time: 9/2/2026 2:15:21 PM
+Message: Object reference not set to an instance of an object.
+StackTrace:    at Shuddhi.Controllers.VendorController.GetVendorById(Int32 id) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\VendorController.cs:line 69

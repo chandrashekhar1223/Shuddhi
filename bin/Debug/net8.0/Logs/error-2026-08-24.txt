@@ -1,0 +1,13 @@
+----------------------------------------
+Time: 8/24/2026 5:31:16 PM
+Message: BeginExecuteNonQuery requires an open and available Connection. The connection's current state is connecting.
+StackTrace:    at System.Data.SqlClient.SqlConnection.GetOpenTdsConnection(String method)
+   at System.Data.SqlClient.SqlConnection.ValidateConnectionForExecute(String method, SqlCommand command)
+   at System.Data.SqlClient.SqlCommand.ValidateCommand(Boolean async, String method)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery(AsyncCallback callback, Object stateObject)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl(Func`3 beginMethod, Func`2 endFunction, Action`1 endAction, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory`1.FromAsync(Func`3 beginMethod, Func`2 endMethod, Object state)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at TokenManagerDB.Assign_To_Vendor(String Vendor_Id, String PickupRequest_Id) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Database\TokenManagerDB.cs:line 175

@@ -1,0 +1,2910 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Shuddhi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dashboard/Rewards": {
+      "post": {
+        "tags": [
+          "Dashboard"
+        ],
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DashboardModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DashboardModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DashboardModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/FAQ": {
+      "get": {
+        "tags": [
+          "FAQ"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Waste/GetWasteMaster": {
+      "get": {
+        "tags": [
+          "GetWasteMaster"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Master/StateCityMaster": {
+      "get": {
+        "tags": [
+          "Master"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/OTP/Sendotp": {
+      "post": {
+        "tags": [
+          "OTP"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendOTPModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendOTPModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendOTPModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/OTP/Verifyotp": {
+      "post": {
+        "tags": [
+          "OTP"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyOTPModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyOTPModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyOTPModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/OTP/ForgotPasswordSendOTP": {
+      "post": {
+        "tags": [
+          "OTP"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/OTP/ForgotPasswordVerifyOTP": {
+      "post": {
+        "tags": [
+          "OTP"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyOTPModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyOTPModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifyOTPModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/OTP/ChangePassword": {
+      "post": {
+        "tags": [
+          "OTP"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/OTP/otpgenerator": {
+      "get": {
+        "tags": [
+          "OTPGenerator"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PickupRequest/AddDryWaste": {
+      "post": {
+        "tags": [
+          "PickupRequest"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "User_ID"
+                ],
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "User_ID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Paper": {
+                    "type": "string"
+                  },
+                  "Cardboard": {
+                    "type": "string"
+                  },
+                  "Plastic": {
+                    "type": "string"
+                  },
+                  "Metal": {
+                    "type": "string"
+                  },
+                  "Glass": {
+                    "type": "string"
+                  },
+                  "Packaging_Waste": {
+                    "type": "string"
+                  },
+                  "Other_Dry_Waste": {
+                    "type": "string"
+                  },
+                  "Dry_Waste_Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Dry_Waste_Photo_Path": {
+                    "type": "string"
+                  },
+                  "CreatedBy": {
+                    "type": "string"
+                  },
+                  "UpdatedBy": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "ID": {
+                  "style": "form"
+                },
+                "User_ID": {
+                  "style": "form"
+                },
+                "Paper": {
+                  "style": "form"
+                },
+                "Cardboard": {
+                  "style": "form"
+                },
+                "Plastic": {
+                  "style": "form"
+                },
+                "Metal": {
+                  "style": "form"
+                },
+                "Glass": {
+                  "style": "form"
+                },
+                "Packaging_Waste": {
+                  "style": "form"
+                },
+                "Other_Dry_Waste": {
+                  "style": "form"
+                },
+                "Dry_Waste_Photo": {
+                  "style": "form"
+                },
+                "Dry_Waste_Photo_Path": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PickupRequest/AddWetWaste": {
+      "post": {
+        "tags": [
+          "PickupRequest"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "User_ID"
+                ],
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "User_ID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Food_Waste": {
+                    "type": "string"
+                  },
+                  "Vegetable_Waste": {
+                    "type": "string"
+                  },
+                  "Fruit_Waste": {
+                    "type": "string"
+                  },
+                  "Garden_Waste": {
+                    "type": "string"
+                  },
+                  "Organic_Waste": {
+                    "type": "string"
+                  },
+                  "Other_Wet_Waste": {
+                    "type": "string"
+                  },
+                  "Wet_Waste_Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Wet_Waste_Photo_Path": {
+                    "type": "string"
+                  },
+                  "CreatedBy": {
+                    "type": "string"
+                  },
+                  "UpdatedBy": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "ID": {
+                  "style": "form"
+                },
+                "User_ID": {
+                  "style": "form"
+                },
+                "Food_Waste": {
+                  "style": "form"
+                },
+                "Vegetable_Waste": {
+                  "style": "form"
+                },
+                "Fruit_Waste": {
+                  "style": "form"
+                },
+                "Garden_Waste": {
+                  "style": "form"
+                },
+                "Organic_Waste": {
+                  "style": "form"
+                },
+                "Other_Wet_Waste": {
+                  "style": "form"
+                },
+                "Wet_Waste_Photo": {
+                  "style": "form"
+                },
+                "Wet_Waste_Photo_Path": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PickupRequest/AddEWaste": {
+      "post": {
+        "tags": [
+          "PickupRequest"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "User_ID"
+                ],
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "User_ID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Mobile": {
+                    "type": "string"
+                  },
+                  "Batteries": {
+                    "type": "string"
+                  },
+                  "Charger": {
+                    "type": "string"
+                  },
+                  "Laptop": {
+                    "type": "string"
+                  },
+                  "Cable": {
+                    "type": "string"
+                  },
+                  "Small_Appliances": {
+                    "type": "string"
+                  },
+                  "Electrical_Equipment": {
+                    "type": "string"
+                  },
+                  "Electronic_Equipment": {
+                    "type": "string"
+                  },
+                  "Other_E_Waste": {
+                    "type": "string"
+                  },
+                  "E_Waste_Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "E_Waste_Photo_Path": {
+                    "type": "string"
+                  },
+                  "CreatedBy": {
+                    "type": "string"
+                  },
+                  "UpdatedBy": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "ID": {
+                  "style": "form"
+                },
+                "User_ID": {
+                  "style": "form"
+                },
+                "Mobile": {
+                  "style": "form"
+                },
+                "Batteries": {
+                  "style": "form"
+                },
+                "Charger": {
+                  "style": "form"
+                },
+                "Laptop": {
+                  "style": "form"
+                },
+                "Cable": {
+                  "style": "form"
+                },
+                "Small_Appliances": {
+                  "style": "form"
+                },
+                "Electrical_Equipment": {
+                  "style": "form"
+                },
+                "Electronic_Equipment": {
+                  "style": "form"
+                },
+                "Other_E_Waste": {
+                  "style": "form"
+                },
+                "E_Waste_Photo": {
+                  "style": "form"
+                },
+                "E_Waste_Photo_Path": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PickupRequest/AddOtherWaste": {
+      "post": {
+        "tags": [
+          "PickupRequest"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "User_ID"
+                ],
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "User_ID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Clothes": {
+                    "type": "string"
+                  },
+                  "Shoes": {
+                    "type": "string"
+                  },
+                  "Thermocol": {
+                    "type": "string"
+                  },
+                  "Used_Cooking_Oil": {
+                    "type": "string"
+                  },
+                  "Mixed_Waste": {
+                    "type": "string"
+                  },
+                  "Other_Waste": {
+                    "type": "string"
+                  },
+                  "Other_Waste_Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Other_Waste_Photo_Path": {
+                    "type": "string"
+                  },
+                  "CreatedBy": {
+                    "type": "string"
+                  },
+                  "UpdatedBy": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "ID": {
+                  "style": "form"
+                },
+                "User_ID": {
+                  "style": "form"
+                },
+                "Clothes": {
+                  "style": "form"
+                },
+                "Shoes": {
+                  "style": "form"
+                },
+                "Thermocol": {
+                  "style": "form"
+                },
+                "Used_Cooking_Oil": {
+                  "style": "form"
+                },
+                "Mixed_Waste": {
+                  "style": "form"
+                },
+                "Other_Waste": {
+                  "style": "form"
+                },
+                "Other_Waste_Photo": {
+                  "style": "form"
+                },
+                "Other_Waste_Photo_Path": {
+                  "style": "form"
+                },
+                "CreatedBy": {
+                  "style": "form"
+                },
+                "UpdatedBy": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PickupRequest/InsertPickupRequest": {
+      "post": {
+        "tags": [
+          "PickupRequest"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "UserId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Society": {
+                    "type": "string"
+                  },
+                  "Address": {
+                    "type": "string"
+                  },
+                  "Pincode": {
+                    "type": "string"
+                  },
+                  "Note": {
+                    "type": "string"
+                  },
+                  "TotalEstimatedWaste": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "PickupDateTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Latitude": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Longitude": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "WasteTypes": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/PickupWasteModel"
+                    }
+                  },
+                  "DryWaste_Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "WetWaste_Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "EWaste_Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "OtherWaste_Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "PickupRequestId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Status": {
+                    "type": "boolean"
+                  },
+                  "CreatedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "SocietyId": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "UserId": {
+                  "style": "form"
+                },
+                "Society": {
+                  "style": "form"
+                },
+                "Address": {
+                  "style": "form"
+                },
+                "Pincode": {
+                  "style": "form"
+                },
+                "Note": {
+                  "style": "form"
+                },
+                "TotalEstimatedWaste": {
+                  "style": "form"
+                },
+                "PickupDateTime": {
+                  "style": "form"
+                },
+                "Latitude": {
+                  "style": "form"
+                },
+                "Longitude": {
+                  "style": "form"
+                },
+                "WasteTypes": {
+                  "style": "form"
+                },
+                "DryWaste_Photo": {
+                  "style": "form"
+                },
+                "WetWaste_Photo": {
+                  "style": "form"
+                },
+                "EWaste_Photo": {
+                  "style": "form"
+                },
+                "OtherWaste_Photo": {
+                  "style": "form"
+                },
+                "PickupRequestId": {
+                  "style": "form"
+                },
+                "Status": {
+                  "style": "form"
+                },
+                "CreatedDate": {
+                  "style": "form"
+                },
+                "SocietyId": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PickupRequest/GetPickupRequestByUserId/{userId}": {
+      "get": {
+        "tags": [
+          "PickupRequest"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PickupRequest/GetPendingPickupRequests": {
+      "get": {
+        "tags": [
+          "PickupRequest"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PickupRequest/UpdateStatus": {
+      "post": {
+        "tags": [
+          "PickupRequest"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickupRequestStatusModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickupRequestStatusModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PickupRequestStatusModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Society/AddSociety": {
+      "post": {
+        "tags": [
+          "Society"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSociety"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSociety"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSociety"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Society/Search": {
+      "post": {
+        "tags": [
+          "Society"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Society/GetSocietes": {
+      "get": {
+        "tags": [
+          "Society"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Society"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetSocieties"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetSocieties"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetSocieties"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Society/UpdateSocieties": {
+      "post": {
+        "tags": [
+          "Society"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSociety"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSociety"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSociety"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanStringValueTuple"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanStringValueTuple"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanStringValueTuple"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Society/DeleteSociety/{id}": {
+      "delete": {
+        "tags": [
+          "Society"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Society/GetById/{id}": {
+      "get": {
+        "tags": [
+          "Society"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TokenManager/GetRequests": {
+      "get": {
+        "tags": [
+          "TokenManager"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TokenManagerModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TokenManagerModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TokenManagerModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TokenManager/GetVendor": {
+      "post": {
+        "tags": [
+          "TokenManager"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VendorByPinRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VendorByPinRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VendorByPinRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VendorByPin"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VendorByPin"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VendorByPin"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TokenManager/Assign_Vendor": {
+      "post": {
+        "tags": [
+          "TokenManager"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AssignVendor"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AssignVendor"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/AssignVendor"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TokenManager/GetAssignedTicketDetails": {
+      "post": {
+        "tags": [
+          "TokenManager"
+        ],
+        "parameters": [
+          {
+            "name": "vendorId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GroupedPickupRequestVendorModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GroupedPickupRequestVendorModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GroupedPickupRequestVendorModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TokenManager/UpdateStatus": {
+      "post": {
+        "tags": [
+          "TokenManager"
+        ],
+        "parameters": [
+          {
+            "name": "PickupRequest_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Vendor_Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Status",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/User/register": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "DateOfBirth",
+                  "FullName"
+                ],
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "FullName": {
+                    "type": "string"
+                  },
+                  "DateOfBirth": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Gender": {
+                    "type": "string"
+                  },
+                  "MobileNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "EmailID": {
+                    "type": "string"
+                  },
+                  "Password": {
+                    "type": "string"
+                  },
+                  "ConfirmPassword": {
+                    "type": "string"
+                  },
+                  "AddressLine1": {
+                    "type": "string"
+                  },
+                  "AddressLine2": {
+                    "type": "string"
+                  },
+                  "SocietyName": {
+                    "type": "string"
+                  },
+                  "AreaName": {
+                    "type": "string"
+                  },
+                  "CityName": {
+                    "type": "string"
+                  },
+                  "District": {
+                    "type": "string"
+                  },
+                  "PinCode": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "RegisteredOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UserStatus": {
+                    "type": "boolean"
+                  },
+                  "User_Profile_Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "User_Profile_photo_url": {
+                    "type": "string"
+                  },
+                  "Wing": {
+                    "type": "string"
+                  },
+                  "Sector": {
+                    "type": "string"
+                  },
+                  "Landmark": {
+                    "type": "string"
+                  },
+                  "Plot_No": {
+                    "type": "string"
+                  },
+                  "House_No": {
+                    "type": "string"
+                  },
+                  "FLoor": {
+                    "type": "string"
+                  },
+                  "Society_Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "ID": {
+                  "style": "form"
+                },
+                "FullName": {
+                  "style": "form"
+                },
+                "DateOfBirth": {
+                  "style": "form"
+                },
+                "Gender": {
+                  "style": "form"
+                },
+                "MobileNumber": {
+                  "style": "form"
+                },
+                "EmailID": {
+                  "style": "form"
+                },
+                "Password": {
+                  "style": "form"
+                },
+                "ConfirmPassword": {
+                  "style": "form"
+                },
+                "AddressLine1": {
+                  "style": "form"
+                },
+                "AddressLine2": {
+                  "style": "form"
+                },
+                "SocietyName": {
+                  "style": "form"
+                },
+                "AreaName": {
+                  "style": "form"
+                },
+                "CityName": {
+                  "style": "form"
+                },
+                "District": {
+                  "style": "form"
+                },
+                "PinCode": {
+                  "style": "form"
+                },
+                "RegisteredOn": {
+                  "style": "form"
+                },
+                "UserStatus": {
+                  "style": "form"
+                },
+                "User_Profile_Photo": {
+                  "style": "form"
+                },
+                "User_Profile_photo_url": {
+                  "style": "form"
+                },
+                "Wing": {
+                  "style": "form"
+                },
+                "Sector": {
+                  "style": "form"
+                },
+                "Landmark": {
+                  "style": "form"
+                },
+                "Plot_No": {
+                  "style": "form"
+                },
+                "House_No": {
+                  "style": "form"
+                },
+                "FLoor": {
+                  "style": "form"
+                },
+                "Society_Id": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/getusers/{Userid}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "Userid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/EditUser": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "DateOfBirth",
+                  "FullName"
+                ],
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "FullName": {
+                    "type": "string"
+                  },
+                  "DateOfBirth": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Gender": {
+                    "type": "string"
+                  },
+                  "MobileNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "EmailID": {
+                    "type": "string"
+                  },
+                  "Password": {
+                    "type": "string"
+                  },
+                  "ConfirmPassword": {
+                    "type": "string"
+                  },
+                  "AddressLine1": {
+                    "type": "string"
+                  },
+                  "AddressLine2": {
+                    "type": "string"
+                  },
+                  "SocietyName": {
+                    "type": "string"
+                  },
+                  "AreaName": {
+                    "type": "string"
+                  },
+                  "CityName": {
+                    "type": "string"
+                  },
+                  "District": {
+                    "type": "string"
+                  },
+                  "PinCode": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "RegisteredOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "UserStatus": {
+                    "type": "boolean"
+                  },
+                  "User_Profile_Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "User_Profile_photo_url": {
+                    "type": "string"
+                  },
+                  "Wing": {
+                    "type": "string"
+                  },
+                  "Sector": {
+                    "type": "string"
+                  },
+                  "Landmark": {
+                    "type": "string"
+                  },
+                  "Plot_No": {
+                    "type": "string"
+                  },
+                  "House_No": {
+                    "type": "string"
+                  },
+                  "FLoor": {
+                    "type": "string"
+                  },
+                  "Society_Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "ID": {
+                  "style": "form"
+                },
+                "FullName": {
+                  "style": "form"
+                },
+                "DateOfBirth": {
+                  "style": "form"
+                },
+                "Gender": {
+                  "style": "form"
+                },
+                "MobileNumber": {
+                  "style": "form"
+                },
+                "EmailID": {
+                  "style": "form"
+                },
+                "Password": {
+                  "style": "form"
+                },
+                "ConfirmPassword": {
+                  "style": "form"
+                },
+                "AddressLine1": {
+                  "style": "form"
+                },
+                "AddressLine2": {
+                  "style": "form"
+                },
+                "SocietyName": {
+                  "style": "form"
+                },
+                "AreaName": {
+                  "style": "form"
+                },
+                "CityName": {
+                  "style": "form"
+                },
+                "District": {
+                  "style": "form"
+                },
+                "PinCode": {
+                  "style": "form"
+                },
+                "RegisteredOn": {
+                  "style": "form"
+                },
+                "UserStatus": {
+                  "style": "form"
+                },
+                "User_Profile_Photo": {
+                  "style": "form"
+                },
+                "User_Profile_photo_url": {
+                  "style": "form"
+                },
+                "Wing": {
+                  "style": "form"
+                },
+                "Sector": {
+                  "style": "form"
+                },
+                "Landmark": {
+                  "style": "form"
+                },
+                "Plot_No": {
+                  "style": "form"
+                },
+                "House_No": {
+                  "style": "form"
+                },
+                "FLoor": {
+                  "style": "form"
+                },
+                "Society_Id": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vendor/vendorregister": {
+      "post": {
+        "tags": [
+          "Vendor"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "VendorName": {
+                    "type": "string"
+                  },
+                  "DateOfBirth": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Gender": {
+                    "type": "string"
+                  },
+                  "MobileNumber": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "EmailID": {
+                    "type": "string"
+                  },
+                  "Password": {
+                    "type": "string"
+                  },
+                  "ConfirmPassword": {
+                    "type": "string"
+                  },
+                  "AddressLine1": {
+                    "type": "string"
+                  },
+                  "AddressLine2": {
+                    "type": "string"
+                  },
+                  "AreaName": {
+                    "type": "string"
+                  },
+                  "CityName": {
+                    "type": "string"
+                  },
+                  "District": {
+                    "type": "string"
+                  },
+                  "PinCode": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "RecycleMainID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "RecycleSubID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "RegisteredOn": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "VendorStatus": {
+                    "type": "boolean"
+                  },
+                  "BusinessLicence": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "BusinessLicenceFileLink": {
+                    "type": "string"
+                  },
+                  "GSTCertificate": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "GSTCertificateFileLink": {
+                    "type": "string"
+                  },
+                  "Waste_Handling_Certificate": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Waste_Handling_CertificateFileLink": {
+                    "type": "string"
+                  },
+                  "Address_Proof": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Address_ProofFileLink": {
+                    "type": "string"
+                  },
+                  "Bank_Details": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Bank_DetailsFileLink": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "ID": {
+                  "style": "form"
+                },
+                "VendorName": {
+                  "style": "form"
+                },
+                "DateOfBirth": {
+                  "style": "form"
+                },
+                "Gender": {
+                  "style": "form"
+                },
+                "MobileNumber": {
+                  "style": "form"
+                },
+                "EmailID": {
+                  "style": "form"
+                },
+                "Password": {
+                  "style": "form"
+                },
+                "ConfirmPassword": {
+                  "style": "form"
+                },
+                "AddressLine1": {
+                  "style": "form"
+                },
+                "AddressLine2": {
+                  "style": "form"
+                },
+                "AreaName": {
+                  "style": "form"
+                },
+                "CityName": {
+                  "style": "form"
+                },
+                "District": {
+                  "style": "form"
+                },
+                "PinCode": {
+                  "style": "form"
+                },
+                "RecycleMainID": {
+                  "style": "form"
+                },
+                "RecycleSubID": {
+                  "style": "form"
+                },
+                "RegisteredOn": {
+                  "style": "form"
+                },
+                "VendorStatus": {
+                  "style": "form"
+                },
+                "BusinessLicence": {
+                  "style": "form"
+                },
+                "BusinessLicenceFileLink": {
+                  "style": "form"
+                },
+                "GSTCertificate": {
+                  "style": "form"
+                },
+                "GSTCertificateFileLink": {
+                  "style": "form"
+                },
+                "Waste_Handling_Certificate": {
+                  "style": "form"
+                },
+                "Waste_Handling_CertificateFileLink": {
+                  "style": "form"
+                },
+                "Address_Proof": {
+                  "style": "form"
+                },
+                "Address_ProofFileLink": {
+                  "style": "form"
+                },
+                "Bank_Details": {
+                  "style": "form"
+                },
+                "Bank_DetailsFileLink": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vendor/GetVendorById/{id}": {
+      "get": {
+        "tags": [
+          "Vendor"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vendor/Vendorlogin": {
+      "post": {
+        "tags": [
+          "Vendor"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vendor/VendorUpdate": {
+      "post": {
+        "tags": [
+          "Vendor"
+        ],
+        "parameters": [
+          {
+            "name": "ID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "VendorName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "DateOfBirth",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Gender",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "MobileNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "EmailID",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Password",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ConfirmPassword",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AddressLine1",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AddressLine2",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AreaName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CityName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "District",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "PinCode",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "RecycleMainID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "RecycleSubID",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "RegisteredOn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "VendorStatus",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "BusinessLicenceFileLink",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GSTCertificateFileLink",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Waste_Handling_CertificateFileLink",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Address_ProofFileLink",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Bank_DetailsFileLink",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "BusinessLicence": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "GSTCertificate": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Waste_Handling_Certificate": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Address_Proof": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "Bank_Details": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "BusinessLicence": {
+                  "style": "form"
+                },
+                "GSTCertificate": {
+                  "style": "form"
+                },
+                "Waste_Handling_Certificate": {
+                  "style": "form"
+                },
+                "Address_Proof": {
+                  "style": "form"
+                },
+                "Bank_Details": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddSociety": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "society_Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "pincode": {
+            "type": "string",
+            "nullable": true
+          },
+          "landmark": {
+            "type": "string",
+            "nullable": true
+          },
+          "sector": {
+            "type": "string",
+            "nullable": true
+          },
+          "plot_No": {
+            "type": "string",
+            "nullable": true
+          },
+          "created_Date": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AssignVendor": {
+        "type": "object",
+        "properties": {
+          "vendor_Id": {
+            "type": "string",
+            "nullable": true
+          },
+          "request_Id": {
+            "type": "string",
+            "nullable": true
+          },
+          "pickupDateTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "wasteType_Id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BooleanStringValueTuple": {
+        "type": "object",
+        "additionalProperties": false
+      },
+      "ChangePasswordModel": {
+        "type": "object",
+        "properties": {
+          "mobileNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "confirmPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "usertype": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DashboardModel": {
+        "type": "object",
+        "properties": {
+          "totalWasteKg": {
+            "type": "number",
+            "format": "double"
+          },
+          "cO2SavedKg": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalPoints": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ForgotPasswordModel": {
+        "type": "object",
+        "properties": {
+          "mobileNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "userType": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetSocieties": {
+        "type": "object",
+        "properties": {
+          "pincode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GroupedPickupRequestVendorModel": {
+        "type": "object",
+        "properties": {
+          "society_ID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "society": {
+            "type": "string",
+            "nullable": true
+          },
+          "wasteTypes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GroupedWasteTypeModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GroupedWasteTypeModel": {
+        "type": "object",
+        "properties": {
+          "wasteTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pickupRequests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PickupRequestVendorModel"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Login": {
+        "required": [
+          "password",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "password": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "isValidUser": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "mail_Id": {
+            "type": "string",
+            "nullable": true
+          },
+          "flag": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PickupRequestStatusModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PickupRequestVendorModel": {
+        "type": "object",
+        "properties": {
+          "pickupRequestId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalEstimatedWaste": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "pickupDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "pincode": {
+            "type": "string",
+            "nullable": true
+          },
+          "assigned_Vendor_Id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "pickupRequestDetailId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "wasteTypeId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "wasteSubTypeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "photoPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "detailCreatedDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "society": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "society_ID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PickupWasteModel": {
+        "type": "object",
+        "properties": {
+          "wasteTypeId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "wasteSubTypeId": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "wasteSubTypeId1": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "photoPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SendOTPModel": {
+        "type": "object",
+        "properties": {
+          "mobileNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TokenManagerModel": {
+        "type": "object",
+        "properties": {
+          "pickupRequestId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "society": {
+            "type": "string",
+            "nullable": true
+          },
+          "wasteTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sub_Waste_Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "longitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalEstimatedWaste": {
+            "type": "number",
+            "format": "double"
+          },
+          "createdDate": {
+            "type": "string",
+            "nullable": true
+          },
+          "assign": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VendorRegistration"
+            },
+            "nullable": true
+          },
+          "pincode": {
+            "type": "string",
+            "nullable": true
+          },
+          "assigned_Vendor_Id": {
+            "type": "string",
+            "nullable": true
+          },
+          "society_Id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VendorByPin": {
+        "type": "object",
+        "properties": {
+          "vendorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "wasteType": {
+            "type": "string",
+            "nullable": true
+          },
+          "vendor_Id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VendorByPinRequest": {
+        "type": "object",
+        "properties": {
+          "pincode": {
+            "type": "string",
+            "nullable": true
+          },
+          "wasteTypeId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VendorRegistration": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vendorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "mobileNumber": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "emailID": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "confirmPassword": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLine1": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLine2": {
+            "type": "string",
+            "nullable": true
+          },
+          "areaName": {
+            "type": "string",
+            "nullable": true
+          },
+          "cityName": {
+            "type": "string",
+            "nullable": true
+          },
+          "district": {
+            "type": "string",
+            "nullable": true
+          },
+          "pinCode": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "recycleMainID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "recycleSubID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "registeredOn": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "vendorStatus": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "businessLicence": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          },
+          "businessLicenceFileLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "gstCertificate": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          },
+          "gstCertificateFileLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "waste_Handling_Certificate": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          },
+          "waste_Handling_CertificateFileLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "address_Proof": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          },
+          "address_ProofFileLink": {
+            "type": "string",
+            "nullable": true
+          },
+          "bank_Details": {
+            "type": "string",
+            "format": "binary",
+            "nullable": true
+          },
+          "bank_DetailsFileLink": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VerifyOTPModel": {
+        "type": "object",
+        "properties": {
+          "mobileNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "otp": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

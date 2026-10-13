@@ -1,0 +1,42 @@
+----------------------------------------
+Time: 9/8/2026 11:14:58 AM
+Message: Object reference not set to an instance of an object.
+StackTrace:    at Shuddhi.Controllers.VendorController.GetVendorById(Int32 id) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\VendorController.cs:line 69
+----------------------------------------
+Time: 9/8/2026 11:17:01 AM
+Message: Object reference not set to an instance of an object.
+StackTrace:    at Shuddhi.Controllers.VendorController.GetVendorById(Int32 id) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\VendorController.cs:line 69
+----------------------------------------
+Time: 9/8/2026 12:30:33 PM
+Message: Value cannot be null. (Parameter 'value')
+StackTrace:    at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Claims.Claim..ctor(String type, String value, String valueType, String issuer, String originalIssuer, ClaimsIdentity subject, String propertyKey, String propertyValue)
+   at System.Security.Claims.Claim..ctor(String type, String value)
+   at Shuddhi.JwtTokenService.GenerateToken(String userId, String userName) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\JwtTokenService.cs:line 19
+   at Shuddhi.Controllers.AuthController.Login(Login request) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\AuthController.cs:line 34
+----------------------------------------
+Time: 9/8/2026 12:31:27 PM
+Message: Value cannot be null. (Parameter 'value')
+StackTrace:    at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Claims.Claim..ctor(String type, String value, String valueType, String issuer, String originalIssuer, ClaimsIdentity subject, String propertyKey, String propertyValue)
+   at System.Security.Claims.Claim..ctor(String type, String value)
+   at Shuddhi.JwtTokenService.GenerateToken(String userId, String userName) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\JwtTokenService.cs:line 19
+   at Shuddhi.Controllers.AuthController.Login(Login request) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\AuthController.cs:line 34
+----------------------------------------
+Time: 9/8/2026 12:42:34 PM
+Message: VendorId
+StackTrace:    at System.Data.ProviderBase.BasicFieldNameLookup.GetOrdinal(String fieldName)
+   at System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   at System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   at Shuddhi.Service.VendorService.VendorLogin(Login request) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Service\VendorService.cs:line 318
+----------------------------------------
+Time: 9/8/2026 12:42:36 PM
+Message: Value cannot be null. (Parameter 'value')
+StackTrace:    at System.ArgumentNullException.Throw(String paramName)
+   at System.ArgumentNullException.ThrowIfNull(Object argument, String paramName)
+   at System.Security.Claims.Claim..ctor(String type, String value, String valueType, String issuer, String originalIssuer, ClaimsIdentity subject, String propertyKey, String propertyValue)
+   at System.Security.Claims.Claim..ctor(String type, String value)
+   at Shuddhi.JwtTokenService.GenerateToken(String userId, String userName) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\JwtTokenService.cs:line 19
+   at Shuddhi.Controllers.VendorController.VendorLogin(Login request) in D:\OLD DATA\CHANDRASHEKHAR\SHAKTI_RRR\Source_Code\Shuddhi\Shuddhi\Controllers\VendorController.cs:line 139
