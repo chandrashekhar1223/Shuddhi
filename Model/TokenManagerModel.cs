@@ -49,9 +49,6 @@ namespace Shuddhi.Model
      //  public List<int> Subwastype_Id { get; set; }
 
 
-        public int Society_Id { get; set; }
-
-
 
 
     }

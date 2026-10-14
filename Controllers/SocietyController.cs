@@ -165,37 +165,6 @@ namespace Shuddhi.Controllers
         }
 
 
-        [HttpGet("GetById/{id:int}")]
-        public async Task<IActionResult> GetById(int id)
-        {
-            if (id <= 0)
-            {
-                return BadRequest(new
-                {
-                    Success = false,
-                    Message = "Invalid Society Id."
-                });
-            }
-
-            var society = await _societyService.GetSocietyById(id);
-
-            if (society == null)
-            {
-                return NotFound(new
-                {
-                    Success = false,
-                    Message = "Society not found."
-                });
-            }
-
-            return Ok(new
-            {
-                Success = true,
-                Data = society
-            });
-        }
-
-
 
     }
 }

@@ -15,6 +15,8 @@
 
         public string? Plot_No { get; set; }
 
+        public string? Staff_Name { get; set; }
+        public long? Staff_Phone_Number { get; set; }
 
         public string? Created_Date { get; set; }
 

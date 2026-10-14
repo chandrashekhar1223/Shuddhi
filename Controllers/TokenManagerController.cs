@@ -27,56 +27,28 @@ namespace Shuddhi.Controllers
 
 
         [HttpPost("GetVendor")]
-        public async Task<List<VendorByPin>> GetVendorsByPincode([FromBody] VendorByPinRequest vendorbypincode)
+        public async Task<List<VendorByPin>> GetVendorsByPincode([FromBody] string pincode)
         {
 
             List<VendorByPin> model = new List<VendorByPin>();
 
-            model = await _tokenManager.vendorByPin(vendorbypincode.pincode, vendorbypincode.wasteTypeId);
+            model = await _tokenManager.vendorByPin(pincode);
 
             return model;
 
         }
 
-
-
         [HttpPost("Assign_Vendor")]
-        public async Task<List<string>> Ticketassigntovendor(
-            [FromBody] List<AssignVendor> Request)
+        public async Task<string> Ticketassigntovendor([FromBody] AssignVendor Request)
         {
-            if (Request == null || Request.Count == 0)
+
+            if (Request == null)
             {
-                return new List<string> { "Request is null or empty" };
+                return "Request is null";
             }
-
-            List<string> results = new List<string>();
-
-            foreach (var item in Request)
-            {
-                string result = await _tokenManager.Ticket_Assign_Vendor(
-                    item.Vendor_Id,
-                    item.Request_Id,
-                    item.pickupDateTime,
-                    item.WasteType_Id
-                );
-
-                results.Add(result);
-            }
-
-            return results;
+            string result = await _tokenManager.Ticket_Assign_Vendor(Request.Vendor_Id, Request.Request_Id,Request.pickupDateTime,Request.WasteType_Id);
+            return result;
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
         //[HttpPost("Ticket_Details")]
         //public async Task<TokenManagerModel> Ticket_Details()
@@ -93,11 +65,11 @@ namespace Shuddhi.Controllers
         //}
 
         [HttpPost("GetAssignedTicketDetails")]
-        public async Task<List<GroupedPickupRequestVendorModel>> GetPickupRequestsByVendor(int vendorId)
+        public async Task<List<PickupRequestVendorModel>> GetPickupRequestsByVendor(int vendorId)
         {
             try
             {
-                List<GroupedPickupRequestVendorModel> resulteddata = new List<GroupedPickupRequestVendorModel>();
+                List<PickupRequestVendorModel> resulteddata = new List<PickupRequestVendorModel>();
 
 
                 resulteddata = await _tokenManager
