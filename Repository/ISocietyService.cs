@@ -10,7 +10,7 @@ namespace Shuddhi.Repository
 
          Task<List<AddSociety>> GetSocieties(string search);
 
-        
+        Task<AddSociety> GetSocietyById(int id);
 
         Task<(bool , string )> UpdateSociety(AddSociety model);
 
@@ -20,11 +20,5 @@ namespace Shuddhi.Repository
         Task<List<AddSociety>> GetSocietieslist();
 
         Task<List<AddSociety>> GetSocietyListByPincode(GetSocieties Pincode);
-
-
-        Task<SocietyModel?> GetSocietyById(int societyId);
-
-
-
     }
 }

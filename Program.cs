@@ -10,14 +10,14 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Logging is already enabled by default, but you can configure it
+// Logging
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 builder.Logging.AddDebug();
-// Add services to the container.
+
+// Services
 string connStr = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUser, UserService>();
@@ -33,8 +33,7 @@ builder.Services.AddScoped<IOTPService, OTPService>();
 builder.Services.AddScoped<ISocietyService, Society>();
 builder.Services.AddHttpContextAccessor();
 
-
-//model validation error response
+// Model validation error response
 builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.InvalidModelStateResponseFactory = context =>
@@ -53,55 +52,57 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
     };
 });
 
-
-// IIS Limit
+// IIS request limit: 100 MB
 builder.Services.Configure<IISServerOptions>(options =>
 {
-    options.MaxRequestBodySize = 104857600; // 100 MB
+    options.MaxRequestBodySize = 104857600;
 });
 
-// Multipart/Form Limit
+// Multipart/form limit: 100 MB
 builder.Services.Configure<FormOptions>(options =>
 {
-    options.MultipartBodyLengthLimit = 104857600; // 100 MB
+    options.MultipartBodyLengthLimit = 104857600;
 });
 
-// Kestrel Limit
+// Kestrel request limit: 100 MB
 builder.WebHost.ConfigureKestrel(options =>
 {
-    options.Limits.MaxRequestBodySize = 104857600; // 100 MB
+    options.Limits.MaxRequestBodySize = 104857600;
 });
+
+// JWT setup (existing configuration retained)
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-.AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
+    .AddJwtBearer(options =>
     {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
 
-        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-        ValidAudience = builder.Configuration["Jwt:Audience"],
-
-        IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-    };
-});
+// CORS: allow the Angular development origins (scheme and port must match exactly)
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngular",
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:4200")
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowAngular", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200", "http://localhost:60655", "https://localhost:60655")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
 });
 
 builder.Services.AddAuthorization();
+
 var app = builder.Build();
-// Configure the HTTP request pipeline.
+
+// Configure HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -109,7 +110,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Explicit routing before CORS ensures the policy is applied to API endpoints
+app.UseRouting();
 app.UseCors("AllowAngular");
+
+// Existing static-file paths retained
 app.UseStaticFiles();
 app.UseStaticFiles(new StaticFileOptions
 {
@@ -124,10 +130,10 @@ app.UseStaticFiles(new StaticFileOptions
     RequestPath = "/Vendor_Documents"
 });
 
-
-//app.UseAuthorization();
-//app.UseAuthorization();
+// Enable the JWT middleware configured above.
+// This makes [Authorize] attributes effective if any controllers use them.
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
-
 app.Run();

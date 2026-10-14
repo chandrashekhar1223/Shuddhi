@@ -56,7 +56,10 @@ namespace Shuddhi.Service
            
         }
 
-       
+        public Task<AddSociety> GetSocietyById(int id)
+        {
+            throw new NotImplementedException();
+        }
 
         public async Task<List<AddSociety>> GetSocietyListByPincode(GetSocieties Pincode)
         {
@@ -79,12 +82,8 @@ namespace Shuddhi.Service
 
         }
 
-        public async Task<SocietyModel?> GetSocietyById(int societyId)
-        {
-            SocietyDB society = new SocietyDB(configuration);
-            var value = await society.GetSocietyById(societyId);
 
-            return value;
-        }
+
+
     }
 }

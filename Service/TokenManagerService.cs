@@ -1,7 +1,6 @@
-﻿using Shuddhi.Database;
+using Shuddhi.Database;
 using Shuddhi.Model;
 using Shuddhi.Repository;
-using System;
 using System.Numerics;
 
 namespace Shuddhi.Service
@@ -19,19 +18,19 @@ namespace Shuddhi.Service
             List< TokenManagerModel> requests = new List< TokenManagerModel>();
 
             requests = await TDB.GetTokenManage();
-           
+
 
 
             return requests;
         }
 
-        public async Task<List<VendorByPin>> vendorByPin(string pincode,int Wastetype_Id)
+        public async Task<List<VendorByPin>> vendorByPin(string pincode)
         {
             TokenManagerDB TDB = new TokenManagerDB(configuration);
 
             List<VendorByPin> requests = new List<VendorByPin>();
 
-            requests =await TDB.GetVendorsByPin(pincode, Wastetype_Id);
+            requests =await TDB.GetVendorsByPin(pincode);
 
             return requests;
         }
@@ -45,113 +44,39 @@ namespace Shuddhi.Service
 
             TokenManagerDB TDB = new TokenManagerDB(configuration);
 
-
-
-
-
-
-
            string result= await TDB.Assign_To_Vendor(Vendorid, Request_Id,R,WasteType_Id);
 
             return result;
         }
 
-        //        public async Task<List<PickupRequestVendorModel>> GetPickupRequestsByVendor(int vendorId)
-        //        {
-        //            // throw new NotImplementedException();
-        //            IConfiguration configuration = new ConfigurationBuilder()
-        //.SetBasePath(Directory.GetCurrentDirectory())
-        //.AddJsonFile("appsettings.json")
-        //.Build();
-        //            string baseUrl = configuration["ApplicationSettings:BaseUrl"];
-
-        //            // vendor.Address_ProofFileLink = $"{baseUrl}/{vendor.Address_ProofFileLink.Replace("\\", "/")}";
-
-        //            TokenManagerDB TDB = new TokenManagerDB(configuration);
-
-        //            List<PickupRequestVendorModel> data =new List<PickupRequestVendorModel> ();
-
-        //             data = await TDB.GetPickupRequestsByVendor(vendorId);
-
-
-
-
-
-
-
-
-        //            if (data != null)
-        //            {
-        //                foreach (PickupRequestVendorModel model in data)
-        //                {
-        //                    model.PhotoPath = model.PhotoPath!= null ? $"{baseUrl}/{model.PhotoPath.Replace("\\", "/")}" : null;
-        //                }
-        //            }
-
-        //            return data;
-
-        //        }
-
-
-
-        public async Task<List<GroupedPickupRequestVendorModel>>
-            GetPickupRequestsByVendor(int vendorId)
+        public async Task<List<PickupRequestVendorModel>> GetPickupRequestsByVendor(int vendorId)
         {
+            // throw new NotImplementedException();
             IConfiguration configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json")
-                .Build();
+.SetBasePath(Directory.GetCurrentDirectory())
+.AddJsonFile("appsettings.json")
+.Build();
+            string baseUrl = configuration["ApplicationSettings:BaseUrl"];
 
-            string baseUrl =
-                configuration["ApplicationSettings:BaseUrl"] ?? "";
+            // vendor.Address_ProofFileLink = $"{baseUrl}/{vendor.Address_ProofFileLink.Replace("\\", "/")}";
 
             TokenManagerDB TDB = new TokenManagerDB(configuration);
 
-            List<PickupRequestVendorModel> data =
-                await TDB.GetPickupRequestsByVendor(vendorId);
+            List<PickupRequestVendorModel> data =new List<PickupRequestVendorModel> ();
 
-            // Convert photo paths before grouping
+             data = await TDB.GetPickupRequestsByVendor(vendorId);
+
             if (data != null)
             {
                 foreach (PickupRequestVendorModel model in data)
                 {
-                    model.PhotoPath = !string.IsNullOrWhiteSpace(model.PhotoPath)
-                        ? $"{baseUrl.TrimEnd('/')}/{model.PhotoPath.Replace("\\", "/").TrimStart('/')}"
-                        : null;
+                    model.PhotoPath = model.PhotoPath!= null ? $"{baseUrl}/{model.PhotoPath.Replace("\\", "/")}" : null;
                 }
             }
 
-          
-// Society-wise, then WasteType-wise grouping
-var groupedRequests = (data ?? new List<PickupRequestVendorModel>())
-    .GroupBy(x => new
-    {
-        x.Society_ID,
-        x.Society
-    })
-    .Select(societyGroup => new GroupedPickupRequestVendorModel
-    {
-        Society_ID =(int) societyGroup.Key.Society_ID,
-        Society = societyGroup.Key.Society,
+            return data;
 
-        WasteTypes = societyGroup
-            .GroupBy(x => x.WasteTypeId)
-            .Select(wasteGroup => new GroupedWasteTypeModel
-            {
-                WasteTypeId =(int) wasteGroup.Key,
-
-                PickupRequests = wasteGroup.ToList()
-            })
-            .ToList()
-    })
-    .ToList();
-
-            return groupedRequests;
-
-           // return groupedRequests;
-        
         }
-        
 
 
 

@@ -4,8 +4,6 @@ using System;
 using System.Data;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Drawing.Configuration;
 
 namespace Shuddhi.Database
 {
@@ -161,25 +159,8 @@ namespace Shuddhi.Database
 
                                     Society_Id = reader["Society_Id"] == DBNull.Value
                 ? 0
-                : Convert.ToInt32(reader["Society_Id"]),
+                : Convert.ToInt32(reader["Society_Id"])
 
-
-
-                                    House_No = reader["House_No"] == DBNull.Value
-    ? string.Empty
-    : reader["House_No"].ToString(),
-
-                                    FLoor = reader["FLoor"] == DBNull.Value
-    ? string.Empty
-    : reader["FLoor"].ToString(),
-
-                                    Landmark = reader["Landmark"] == DBNull.Value
-    ? string.Empty
-    : reader["Landmark"].ToString(),
-
-                                    Wing = reader["Wing"] == DBNull.Value
-    ? string.Empty
-    : reader["Wing"].ToString(),
 
                                 };
 

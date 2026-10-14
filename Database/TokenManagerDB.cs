@@ -142,10 +142,6 @@ public class TokenManagerDB
                         model.Assigned_Vendor_Id = reader["Assigned_Vendor_Id"] != DBNull.Value
                             ? reader["Assigned_Vendor_Id"].ToString() : null;
 
-                        model.Society_Id = reader["Society_Id"] != DBNull.Value
-                            ? Convert.ToInt32(reader["Society_Id"])
-                            : 0;
-
                         result.Add(model);
                     }
                 }
@@ -156,7 +152,7 @@ public class TokenManagerDB
     }
 
 
-    public async Task<List<VendorByPin>> GetVendorsByPin(string pincode,int Wastetype_Id)
+    public async Task<List<VendorByPin>> GetVendorsByPin(string pincode)
     {
         List<VendorByPin> vendors = new List<VendorByPin>();
         string connectionString =
@@ -169,8 +165,6 @@ public class TokenManagerDB
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.Add("@Pincode", SqlDbType.VarChar, 10).Value = pincode;
-
-                cmd.Parameters.Add("@Wastetype_Id", SqlDbType.Int).Value = Wastetype_Id;
 
                 await con.OpenAsync();
 
@@ -412,9 +406,8 @@ public class TokenManagerDB
     : Convert.ToDecimal(reader["TotalEstimatedWaste"]),
 
                             PickupDateTime = reader["PickupDateTime"] == DBNull.Value
-    || string.IsNullOrWhiteSpace(reader["PickupDateTime"].ToString())
-        ? (DateTime?)null
-        : Convert.ToDateTime(reader["PickupDateTime"]),
+    ? DateTime.MinValue
+    : Convert.ToDateTime(reader["PickupDateTime"]),
 
                             Latitude = reader["Latitude"] == DBNull.Value
     ? 0
@@ -463,10 +456,6 @@ public class TokenManagerDB
                             DetailCreatedDate = reader["CreatedDate"] == DBNull.Value
     ? DateTime.MinValue
     : Convert.ToDateTime(reader["CreatedDate"]),
-
-                            Society_ID = reader["Society_Id"] == DBNull.Value
-    ? null
-    : Convert.ToInt32(reader["Society_Id"]),
 
                             ID = reader["WasteTypeIdUnique"] == DBNull.Value
     ? 0
